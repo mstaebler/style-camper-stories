@@ -26,15 +26,21 @@
   <!-- nav bar -->
   <!-- end of nav bar -->
 
-  <div class="container">
+  <div class="container" ng-controller="PostsCtrl">
      
     <!--<div ng-view></div>-->
     
-    <!-- display posts headline test -->
-    <div ng-controller="PostsCtrl">
-      <ul ng-repeat="post in posts">
-        <li><img src="{{post.author.picture}}" alt="Author Picture"> {{post.headline}} - {{post.author.username}} <a href="{{post.link}}" class="btn btn-default" alt="link">read more</a></li>
-      </ul>
+    <!-- display posts -->
+    <div class="row" >
+      <div class="col-xs-6 col-md-3 col-lg-2 thumbnail" ng-repeat="post in posts">
+        <a href="{{post.link}}">
+          <img class="thumbnail img-responsive img-thumbnail" src="{{post.author.picture}}" alt="Author Picture"/></a>
+          <h4><a href="{{post.link}}" >{{post.headline}} - {{post.author.username}}</a></h4>
+            <a href="#" class="btn btn-primary" alt="link">read more</a>
+        <div><span>upVotes:</span><span class="glyphicon glyphicon-search"></span><span>{{post.upVotes.length}}</span></div>
+      <div><span class="glyphicon glyphicon-search"></span></div>
+      </div>
+      <div></div>
     </div>
     
   </div>
