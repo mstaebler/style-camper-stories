@@ -26,8 +26,8 @@
   <!-- nav bar -->
   <!-- end of nav bar -->
 
-  <div class="container" ng-controller="PostsCtrl">
-     
+  <div class="container text-center" ng-controller="PostsCtrl">
+  <h1>Camper News</h1>     
     <!--<div ng-view></div>-->
     
     <!-- display posts -->
@@ -37,10 +37,8 @@
           <img class="thumbnail img-responsive img-thumbnail" src="{{post.author.picture}}" alt="Author Picture"/></a>
           <h4><a href="{{post.link}}" >{{post.headline}} - {{post.author.username}}</a></h4>
             <a href="#" class="btn btn-primary" alt="link">read more</a>
-        <div><span>upVotes:</span><span class="glyphicon glyphicon-search"></span><span>{{post.upVotes.length}}</span></div>
-      <div><span class="glyphicon glyphicon-search"></span></div>
+        <div><span class="glyphicon glyphicon-thumbs-up"></span><span>{{post.upVotes.length}}</span></div>
       </div>
-      <div></div>
     </div>
     
   </div>
